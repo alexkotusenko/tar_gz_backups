@@ -1,0 +1,17 @@
+# no nesting!!!
+# 
+# the key is a STRING which is the location of the source file or folder to be taped (.tar) and compressed (.gz)
+# the key value should correspond to a valid file or folder
+#
+# the value is a STRING which is the location of the output archive (.tar.gz)
+# the parent folder of the output value specified should exist (because you can't just create a file in a folder that does not exist)
+#
+# the script will not override anything by default
+# if you ever have a .tar.gz file with the same name at the same location, and the script is told to put the output at that very location, it will not override anything
+# to override any clashes, pass the -O / --override parameter
+
+
+# TIP: make sure to specify the .tar.gz extension the output filepaths for more clarity
+# it's not required per se but avoids any confusion
+/home/username1/Documents/data: /home/username1/backups/data.tar.gz
+/home/username1/Pictures/family: /home/username1/backups/family_photos.tar.gz 
